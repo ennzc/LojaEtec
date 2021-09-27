@@ -36,7 +36,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Desktop.setLayout(DesktopLayout);
         DesktopLayout.setHorizontalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 326, Short.MAX_VALUE)
+            .addGap(0, 514, Short.MAX_VALUE)
         );
         DesktopLayout.setVerticalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -52,12 +52,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         MenuCadastro.setText("Cadastro");
 
         MenuCadastroCliente.setText("Cliente");
+        MenuCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroClienteActionPerformed(evt);
+            }
+        });
         MenuCadastro.add(MenuCadastroCliente);
 
         MenuCadastroOS.setText("OS");
         MenuCadastro.add(MenuCadastroOS);
 
         MenuCadastroUsuario.setText("Usuários");
+        MenuCadastroUsuario.setEnabled(false);
         MenuCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuCadastroUsuarioActionPerformed(evt);
@@ -68,6 +74,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Menu.add(MenuCadastro);
 
         MenuRelatorio.setText("Relatório ");
+        MenuRelatorio.setEnabled(false);
 
         MenuRelatorioServicos.setText("Serviços");
         MenuRelatorio.add(MenuRelatorioServicos);
@@ -120,7 +127,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(lblUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblData)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(365, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Desktop))
@@ -130,6 +137,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void MenuCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroUsuarioActionPerformed
+        TelaUsuarios usuarios = new TelaUsuarios();
+        usuarios.setVisible(true);
+        Desktop.add(usuarios);
     }//GEN-LAST:event_MenuCadastroUsuarioActionPerformed
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         Date data = new Date();
@@ -149,6 +159,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         sobre.setVisible(true);
         
     }//GEN-LAST:event_MenuAjudaSobreActionPerformed
+
+    private void MenuCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroClienteActionPerformed
+        TelaClientes clientes = new TelaClientes();
+        clientes.setVisible(true);
+        Desktop.add(clientes);
+    }//GEN-LAST:event_MenuCadastroClienteActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -189,12 +205,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu MenuCadastro;
     private javax.swing.JMenuItem MenuCadastroCliente;
     private javax.swing.JMenuItem MenuCadastroOS;
-    private javax.swing.JMenuItem MenuCadastroUsuario;
+    public static javax.swing.JMenuItem MenuCadastroUsuario;
     private javax.swing.JMenu MenuOpcoes;
     private javax.swing.JMenuItem MenuOpcoesSair;
-    private javax.swing.JMenu MenuRelatorio;
+    public static javax.swing.JMenu MenuRelatorio;
     private javax.swing.JMenuItem MenuRelatorioServicos;
     private javax.swing.JLabel lblData;
-    private javax.swing.JLabel lblUsuario;
+    public static javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }
