@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Set-2021 às 19:04
--- Versão do servidor: 10.4.20-MariaDB
--- versão do PHP: 8.0.9
+-- Tempo de geração: 28-Out-2021 às 15:45
+-- Versão do servidor: 10.4.21-MariaDB
+-- versão do PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `clientes` (
   `idcli` int(11) NOT NULL,
   `nomecli` varchar(50) NOT NULL,
-  `endcli` varchar(100) DEFAULT NULL,
+  `endcli` varchar(100) NOT NULL,
   `fonecli` varchar(15) NOT NULL,
-  `emailcli` varchar(50) DEFAULT NULL
+  `emailcli` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -40,8 +40,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`idcli`, `nomecli`, `endcli`, `fonecli`, `emailcli`) VALUES
-(1, 'Enzo', 'Rua XXXXX', '11956946947', 'ennzzc@gmail.com'),
-(2, 'Pedrinho', 'Rua KKKK', '11584962587', 'pedrinho@gmail.com');
+(1, 'Enzo', 'Rua XXXXX', '11956946947', 'ennzzc@gmail.com');
 
 -- --------------------------------------------------------
 
