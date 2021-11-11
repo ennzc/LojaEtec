@@ -60,6 +60,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         MenuCadastro.add(MenuCadastroCliente);
 
         MenuCadastroOS.setText("OS");
+        MenuCadastroOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCadastroOSActionPerformed(evt);
+            }
+        });
         MenuCadastro.add(MenuCadastroOS);
 
         MenuCadastroUsuario.setText("Usuários");
@@ -165,6 +170,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         clientes.setVisible(true);
         Desktop.add(clientes);
     }//GEN-LAST:event_MenuCadastroClienteActionPerformed
+
+    private void MenuCadastroOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCadastroOSActionPerformed
+        TelaOS os = new TelaOS();
+        os.setVisible(true);
+        Desktop.add(os);
+    }//GEN-LAST:event_MenuCadastroOSActionPerformed
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
