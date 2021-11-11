@@ -1,0 +1,3 @@
+# LojaEtec
+
+Projeto de escola.
