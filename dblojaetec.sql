@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Nov-2021 às 12:52
+-- Tempo de geração: 16-Nov-2021 às 15:33
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.9
 
@@ -57,15 +57,15 @@ CREATE TABLE `ordem_servico` (
   `tecnico` varchar(50) NOT NULL,
   `valor` decimal(10,2) NOT NULL,
   `idcli` int(11) NOT NULL,
-  `orcamento` varchar(150) NOT NULL,
-  `situacao_os` varchar(150) NOT NULL
+  `tipo` varchar(15) NOT NULL,
+  `situacao` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `ordem_servico`
 --
 
-INSERT INTO `ordem_servico` (`os`, `data_os`, `equipamento`, `defeito`, `servico`, `tecnico`, `valor`, `idcli`, `orcamento`, `situacao_os`) VALUES
+INSERT INTO `ordem_servico` (`os`, `data_os`, `equipamento`, `defeito`, `servico`, `tecnico`, `valor`, `idcli`, `tipo`, `situacao`) VALUES
 (1, '2021-08-19 13:03:05', 'PC', 'Peca queimada', 'Alteracao da peca', 'Joaozinho', '500.00', 1, '', '');
 
 -- --------------------------------------------------------
