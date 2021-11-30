@@ -457,6 +457,9 @@
           <Image iconType="3" name="/br/com/loja/icones/update.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOsAlterarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnOsApagar">
       <Properties>
