@@ -88,7 +88,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`iduser`, `usuario`, `fone`, `login`, `senha`, `perfil`) VALUES
-(1, 'Enzo', '11956946947', 'enzo', '97531', 'admin'),
+(1, 'Enzo', '1199999999', 'enzo', '97531', 'admin'),
 (2, 'FULANO DA SILVA', '1199999-9999', 'random', '97531', 'user'),
 (3, 'ALEATORIO DA SILVA', '1199999-9999', 'aleatorio', '97531', 'user');
 
